@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Cores da marca GRAFENO
+				grafeno: {
+					blue: '#2A3D8F',
+					green: '#2D9B4B',
+					lightGray: '#F8F9FA'
 				}
 			},
 			borderRadius: {
