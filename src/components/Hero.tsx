@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -22,10 +21,7 @@ export const Hero = () => {
   ];
 
   return (
-    <section
-      id="início"
-      className="pt-24 pb-16 bg-white"
-    >
+    <section id="início" className="pt-24 pb-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -123,7 +119,7 @@ export const Hero = () => {
                 {/* Triângulos animados */}
                 <motion.div
                   className="absolute w-0 h-0 border-l-[25px] border-r-[25px] border-b-[40px] border-l-transparent border-r-transparent border-b-grafeno-green/30 shadow-lg"
-                  style={{ left: '15%', top: '30%' }}
+                  style={{ left: "15%", top: "30%" }}
                   initial={{ scale: 0, rotate: 0 }}
                   animate={{
                     scale: [0, 1, 0.7, 1.1, 0.9],
@@ -140,7 +136,7 @@ export const Hero = () => {
 
                 <motion.div
                   className="absolute w-0 h-0 border-l-[20px] border-r-[20px] border-b-[30px] border-l-transparent border-r-transparent border-b-grafeno-blue/25 shadow-lg"
-                  style={{ right: '20%', top: '60%' }}
+                  style={{ right: "20%", top: "60%" }}
                   initial={{ scale: 0, rotate: 180 }}
                   animate={{
                     scale: [0, 1.2, 0.6, 1, 0.8],
@@ -158,8 +154,8 @@ export const Hero = () => {
 
                 {/* Losangos adicionais */}
                 <motion.div
-                  className="absolute w-8 h-8 bg-grafeno-green/20 transform rotate-45 shadow-lg"
-                  style={{ left: '70%', top: '20%' }}
+                  className="absolute w-8 h-8  transform rotate-45 shadow-lg"
+                  style={{ left: "70%", top: "20%" }}
                   initial={{ scale: 0, rotate: 45 }}
                   animate={{
                     scale: [0, 1, 0.5, 1.3, 1],
@@ -180,7 +176,7 @@ export const Hero = () => {
               <img
                 src="/lovable-uploads/0196213a-c0c6-4aa1-bcad-fe5231cdecf9.png"
                 alt="GRAFENO Engenharia e Construção"
-                className="max-w-full h-auto relative z-10"
+                className="max-w-full h-auto relative"
               />
             </div>
           </motion.div>
