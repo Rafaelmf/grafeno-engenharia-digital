@@ -17,7 +17,7 @@ export default defineConfig(({ mode }) => ({
     include: /\.tsx?$/,
     exclude: [],
   },
-  base: "/grafeno-engenharia-digital/",
+  base: mode === "production" ? "/grafeno-engenharia-digital" : "/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
