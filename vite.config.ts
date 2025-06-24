@@ -12,12 +12,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [react(), mode === "development" && componentTagger()].filter(
     Boolean
   ),
-  esbuild: {
-    loader: "tsx",
-    include: /\.tsx?$/,
-    exclude: [],
-  },
-  base: mode === "production" ? "/grafeno-engenharia-digital" : "/",
+  base: mode === "production" ? "/grafeno-engenharia-digital/" : "/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
