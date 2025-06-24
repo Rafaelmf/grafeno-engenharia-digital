@@ -11,19 +11,20 @@ export const Hero = () => {
     }
   };
 
-  // Configurações para as formas animadas
+  // Configurações para as formas animadas - versão mais visível
   const shapes = [
-    { size: 60, delay: 0, duration: 8, color: "bg-grafeno-blue/10" },
-    { size: 40, delay: 2, duration: 12, color: "bg-grafeno-green/15" },
-    { size: 80, delay: 4, duration: 10, color: "bg-grafeno-blue/8" },
-    { size: 30, delay: 1, duration: 15, color: "bg-grafeno-green/12" },
-    { size: 50, delay: 3, duration: 9, color: "bg-grafeno-blue/12" },
+    { size: 80, delay: 0, duration: 6, color: "bg-grafeno-blue/20" },
+    { size: 60, delay: 1, duration: 8, color: "bg-grafeno-green/25" },
+    { size: 100, delay: 2, duration: 7, color: "bg-grafeno-blue/15" },
+    { size: 40, delay: 0.5, duration: 9, color: "bg-grafeno-green/20" },
+    { size: 70, delay: 1.5, duration: 5, color: "bg-grafeno-blue/25" },
+    { size: 50, delay: 2.5, duration: 10, color: "bg-grafeno-green/18" },
   ];
 
   return (
     <section
       id="início"
-      className="pt-24 pb-16 bg-gradient-to-br from-grafeno-lightGray to-white"
+      className="pt-24 pb-16 bg-white"
     >
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -86,36 +87,28 @@ export const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex justify-center relative"
           >
-            <div className="relative">
-              {/* Formas geométricas animadas de fundo */}
-              <div className="absolute inset-0 overflow-hidden">
+            <div className="relative w-full h-96 flex items-center justify-center">
+              {/* Container das animações de fundo */}
+              <div className="absolute inset-0 w-full h-full overflow-hidden">
                 {shapes.map((shape, index) => (
                   <motion.div
-                    key={index}
-                    className={`absolute rounded-full ${shape.color}`}
+                    key={`circle-${index}`}
+                    className={`absolute rounded-full ${shape.color} shadow-lg`}
                     style={{
                       width: shape.size,
                       height: shape.size,
+                      left: `${20 + Math.random() * 60}%`,
+                      top: `${20 + Math.random() * 60}%`,
                     }}
                     initial={{
-                      x: Math.random() * 400 - 200,
-                      y: Math.random() * 400 - 200,
                       scale: 0,
+                      opacity: 0,
                     }}
                     animate={{
-                      x: [
-                        Math.random() * 400 - 200,
-                        Math.random() * 400 - 200,
-                        Math.random() * 400 - 200,
-                        Math.random() * 400 - 200,
-                      ],
-                      y: [
-                        Math.random() * 400 - 200,
-                        Math.random() * 400 - 200,
-                        Math.random() * 400 - 200,
-                        Math.random() * 400 - 200,
-                      ],
-                      scale: [0, 1, 0.8, 1],
+                      scale: [0, 1, 0.8, 1.2, 1],
+                      opacity: [0, 0.8, 0.5, 0.9, 0.6],
+                      x: [0, 50, -30, 40, 0],
+                      y: [0, -40, 60, -20, 0],
                       rotate: [0, 180, 360],
                     }}
                     transition={{
@@ -127,32 +120,55 @@ export const Hero = () => {
                   />
                 ))}
 
-                {/* Formas triangulares adicionais */}
+                {/* Triângulos animados */}
                 <motion.div
-                  className="absolute w-0 h-0 border-l-[20px] border-r-[20px] border-b-[35px] border-l-transparent border-r-transparent border-b-grafeno-green/20"
-                  initial={{ x: -100, y: 50, rotate: 0 }}
+                  className="absolute w-0 h-0 border-l-[25px] border-r-[25px] border-b-[40px] border-l-transparent border-r-transparent border-b-grafeno-green/30 shadow-lg"
+                  style={{ left: '15%', top: '30%' }}
+                  initial={{ scale: 0, rotate: 0 }}
                   animate={{
-                    x: [100, -50, 150, -100],
-                    y: [50, 200, -50, 100],
+                    scale: [0, 1, 0.7, 1.1, 0.9],
                     rotate: [0, 120, 240, 360],
+                    x: [0, 60, -40, 80, 0],
+                    y: [0, -50, 70, -30, 0],
                   }}
                   transition={{
-                    duration: 14,
+                    duration: 12,
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
                 />
 
                 <motion.div
-                  className="absolute w-0 h-0 border-l-[15px] border-r-[15px] border-b-[25px] border-l-transparent border-r-transparent border-b-grafeno-blue/15"
-                  initial={{ x: 200, y: -50, rotate: 180 }}
+                  className="absolute w-0 h-0 border-l-[20px] border-r-[20px] border-b-[30px] border-l-transparent border-r-transparent border-b-grafeno-blue/25 shadow-lg"
+                  style={{ right: '20%', top: '60%' }}
+                  initial={{ scale: 0, rotate: 180 }}
                   animate={{
-                    x: [-80, 180, -120, 200],
-                    y: [-50, 150, 80, -50],
-                    rotate: [180, 300, 60, 180],
+                    scale: [0, 1.2, 0.6, 1, 0.8],
+                    rotate: [180, 300, 60, 240, 180],
+                    x: [0, -70, 50, -40, 0],
+                    y: [0, 40, -60, 30, 0],
                   }}
                   transition={{
-                    duration: 11,
+                    duration: 10,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1,
+                  }}
+                />
+
+                {/* Losangos adicionais */}
+                <motion.div
+                  className="absolute w-8 h-8 bg-grafeno-green/20 transform rotate-45 shadow-lg"
+                  style={{ left: '70%', top: '20%' }}
+                  initial={{ scale: 0, rotate: 45 }}
+                  animate={{
+                    scale: [0, 1, 0.5, 1.3, 1],
+                    rotate: [45, 225, 405],
+                    x: [0, -50, 30, -70, 0],
+                    y: [0, 60, -40, 50, 0],
+                  }}
+                  transition={{
+                    duration: 14,
                     repeat: Infinity,
                     ease: "easeInOut",
                     delay: 2,
