@@ -12,6 +12,11 @@ export default defineConfig(({ mode }) => ({
   plugins: [react(), mode === "development" && componentTagger()].filter(
     Boolean
   ),
+  esbuild: {
+    loader: "tsx",
+    include: /\.tsx?$/,
+    exclude: [],
+  },
   base: "/grafeno-engenharia-digital/",
   resolve: {
     alias: {
