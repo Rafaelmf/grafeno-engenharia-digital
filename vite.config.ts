@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => {
     plugins: [react(), mode === "development" && componentTagger()].filter(
       Boolean
     ),
-    base: mode === "development" ? "/" : "/grafeno-engenharia-digital/",
+    base: "/",
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "./src"),
