@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -40,28 +39,26 @@ export const Header = () => {
             className="flex items-center space-x-3"
           >
             <img
-              src="/lovable-uploads/59c10998-0965-4c18-8782-079cd7e9a3c3.png"
+              src="/lovable-uploads/horizontal_logo.png"
               alt="GRAFENO Logo"
-              className="h-12 w-12"
+              className="h-12 w-auto"
             />
-            <div>
-              <h1 className="text-xl font-bold text-grafeno-blue">GRAFENO</h1>
-              <p className="text-sm text-gray-600">Engenharia e Construção</p>
-            </div>
           </motion.div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {["início", "sobre", "serviços", "clientes", "contato"].map((item) => (
-              <Button
-                key={item}
-                variant="ghost"
-                onClick={() => scrollToSection(item)}
-                className="text-grafeno-blue hover:text-grafeno-green transition-colors capitalize"
-              >
-                {item}
-              </Button>
-            ))}
+            {["início", "sobre", "serviços", "clientes", "contato"].map(
+              (item) => (
+                <Button
+                  key={item}
+                  variant="ghost"
+                  onClick={() => scrollToSection(item)}
+                  className="text-grafeno-blue hover:text-grafeno-green transition-colors capitalize"
+                >
+                  {item}
+                </Button>
+              )
+            )}
           </nav>
 
           {/* Mobile Menu Button */}
@@ -82,16 +79,18 @@ export const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             className="md:hidden mt-4 bg-white rounded-lg shadow-lg p-4"
           >
-            {["início", "sobre", "serviços", "clientes", "contato"].map((item) => (
-              <Button
-                key={item}
-                variant="ghost"
-                onClick={() => scrollToSection(item)}
-                className="w-full text-left justify-start text-grafeno-blue hover:text-grafeno-green capitalize"
-              >
-                {item}
-              </Button>
-            ))}
+            {["início", "sobre", "serviços", "clientes", "contato"].map(
+              (item) => (
+                <Button
+                  key={item}
+                  variant="ghost"
+                  onClick={() => scrollToSection(item)}
+                  className="w-full text-left justify-start text-grafeno-blue hover:text-grafeno-green capitalize"
+                >
+                  {item}
+                </Button>
+              )
+            )}
           </motion.nav>
         )}
       </div>
