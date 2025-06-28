@@ -1,12 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  Zap,
-  Building,
-  Lightbulb,
-  Settings,
-  Network,
-  Power,
-} from "lucide-react";
+import { Power, Cable, Gauge, BatteryCharging, Plug, Home } from "lucide-react";
 
 export const Services = () => {
   const services = [
@@ -16,31 +9,31 @@ export const Services = () => {
       description: "Projeto, Execução Civil e aprovação na concessionária.",
     },
     {
-      icon: Settings,
+      icon: Cable,
       title: "Assessoria Técnica para Ligação",
       description:
         "Ligação de empreendimentos em Baixa e Média Tensão, com total conformidade às normas, orientando o cliente nas soluções dos problemas visando custo-benefício para o cliente.",
     },
     {
-      icon: Building,
-      title: "Centro de Meditação",
+      icon: Gauge,
+      title: "Centro de Medição",
       description:
         "Projeto e execução completa de centros de medição para empreendimentos de todos os portes.",
     },
     {
-      icon: Zap,
+      icon: BatteryCharging,
       title: "Cabine Primária",
       description:
         "Projeto e Execução de Cabine Primária em conformidade com as normas vigentes.",
     },
     {
-      icon: Network,
+      icon: Plug,
       title: "Ligação Provisória de Obra",
       description:
         "Soluções rápidas e seguras para fornecimento de energia durante a fase de construção.",
     },
     {
-      icon: Lightbulb,
+      icon: Home,
       title: "Rede Elétrica de Condomínio",
       description:
         "Projeto, execução e incorporação de rede elétrica e civil com ligação aérea ou subterrânea.",
