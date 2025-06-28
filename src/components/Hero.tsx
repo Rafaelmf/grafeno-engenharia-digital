@@ -47,8 +47,9 @@ export const Hero = () => {
               transition={{ delay: 0.4 }}
               className="text-xl text-gray-700 mb-8 leading-relaxed"
             >
-              Soluções técnicas para empreendimentos de todos os portes,
-              baseadas em décadas de experiência no setor elétrico paulista.
+              Soluções técnicas e econômicas para empreendimentos de todos os
+              portes, baseadas em décadas de experiência no setor elétrico
+              paulista.
             </motion.p>
 
             <motion.div

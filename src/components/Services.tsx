@@ -1,38 +1,49 @@
-
 import { motion } from "framer-motion";
-import { Zap, Building, Lightbulb, Settings, Network, Power } from "lucide-react";
+import {
+  Zap,
+  Building,
+  Lightbulb,
+  Settings,
+  Network,
+  Power,
+} from "lucide-react";
 
 export const Services = () => {
   const services = [
     {
       icon: Power,
-      title: "Assessoria Técnica para Ligação",
-      description: "Ligação de empreendimentos em Baixa, Média e Alta Tensão com total conformidade às normas.",
+      title: "Câmara Transformadora",
+      description: "Projeto, Execução Civil e aprovação na concessionária.",
     },
     {
       icon: Settings,
-      title: "Centro de Medição",
-      description: "Projeto e execução completa de centros de medição para empreendimentos de todos os portes.",
+      title: "Assessoria Técnica para Ligação",
+      description:
+        "Ligação de empreendimentos em Baixa e Média Tensão, com total conformidade às normas, orientando o cliente nas soluções dos problemas visando custo-benefício para o cliente.",
     },
     {
       icon: Building,
-      title: "Cabine Primária",
-      description: "Projeto e execução de cabines primárias seguindo as especificações técnicas mais rigorosas.",
+      title: "Centro de Meditação",
+      description:
+        "Projeto e execução completa de centros de medição para empreendimentos de todos os portes.",
     },
     {
       icon: Zap,
-      title: "Ligação Provisória de Obra",
-      description: "Soluções rápidas e seguras para fornecimento de energia durante a fase de construção.",
+      title: "Cabine Primária",
+      description:
+        "Projeto e Execução de Cabine Primária em conformidade com as normas vigentes.",
     },
     {
       icon: Network,
-      title: "Rede Elétrica de Condomínio",
-      description: "Projeto, execução e incorporação de rede elétrica e civil com ligação aérea e subterrânea.",
+      title: "Ligação Provisória de Obra",
+      description:
+        "Soluções rápidas e seguras para fornecimento de energia durante a fase de construção.",
     },
     {
       icon: Lightbulb,
-      title: "Iluminação Pública",
-      description: "Projeto e execução de sistemas de iluminação pública eficientes e sustentáveis.",
+      title: "Rede Elétrica de Condomínio",
+      description:
+        "Projeto, execução e incorporação de rede elétrica e civil com ligação aérea ou subterrânea.",
     },
   ];
 
@@ -50,9 +61,9 @@ export const Services = () => {
             Nossos Serviços
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Oferecemos soluções completas em engenharia elétrica, 
-            desde o projeto até a execução, sempre em conformidade 
-            com as normas técnicas vigentes.
+            Oferecemos soluções completas em engenharia elétrica e civil, desde
+            o projeto até a execução, sempre visando custo-beneficio para o
+            cliente e em conformidade com as normas técnicas vigentes.
           </p>
         </motion.div>
 
@@ -97,8 +108,10 @@ export const Services = () => {
                 Câmara Transformadora
               </h4>
               <p className="text-gray-700">
-                Projeto e execução de câmaras transformadoras com total 
+                Projeto e execução de câmaras transformadoras com total
                 conformidade às normas de segurança e eficiência energética.
+                garantindo aprovação de projetos junto a concessionária e
+                rapidez na execução.
               </p>
             </div>
             <div>
@@ -106,8 +119,9 @@ export const Services = () => {
                 Consultoria Especializada
               </h4>
               <p className="text-gray-700">
-                Assessoria técnica baseada em décadas de experiência, 
-                garantindo a aprovação de projetos junto às concessionárias.
+                Assessoria técnica baseada em décadas de experiência, garantindo
+                soluções econômicas para a aprovação de projetos e ligação dos
+                empreendimentos.
               </p>
             </div>
           </div>
